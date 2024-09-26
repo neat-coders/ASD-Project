@@ -1,8 +1,4 @@
-/**
- * Author: Bayarjargal Jargalsaikhan
- * Date:2024.05.22
- * Time:13:23
- */
+
 
 package app.bookstore;
 
@@ -36,7 +32,7 @@ public class TestApplication {
         DAO<Book, String> bookDAO = new DAO<>("books.store");
 
         AccountFacade facade = new AccountFacadeImpl(accountDAO);
-        Customer customer = new Customer("Bayarjargal", "test@test.com", new Address("4th", "Fairfield", "IA", "52556"));
+        Customer customer = new Customer("Faniel", "test@test.com", new Address("4th", "Fairfield", "IA", "52556"));
         BookStoreAccount account = new BookStoreAccount("123", customer);
         facade.create("123" , account);
         facade.create("124" , account);

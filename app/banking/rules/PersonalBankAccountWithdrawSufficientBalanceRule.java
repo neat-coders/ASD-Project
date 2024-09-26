@@ -1,8 +1,4 @@
-/**
- * Author: Bayarjargal Jargalsaikhan
- * Date:2024.05.22
- * Time:10:45
- */
+
 
 package app.banking.rules;
 
