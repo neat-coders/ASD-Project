@@ -1,8 +1,3 @@
-/**
- * Author: Bayarjargal Jargalsaikhan
- * Date:2024.05.21
- * Time:11:36
- */
 
 package app.creditcard.strategies;
 

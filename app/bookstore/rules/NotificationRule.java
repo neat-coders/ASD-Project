@@ -1,8 +1,3 @@
-/**
- * Author: Bayarjargal Jargalsaikhan
- * Date:2024.05.22
- * Time:13:32
- */
 
 package app.bookstore.rules;
 

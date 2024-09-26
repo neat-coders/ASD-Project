@@ -1,8 +1,3 @@
-/**
- * Author: Bayarjargal Jargalsaikhan
- * Date:2024.05.22
- * Time:13:15
- */
 
 package app.bookstore.integration;
 

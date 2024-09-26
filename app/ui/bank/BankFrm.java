@@ -278,7 +278,6 @@ public class BankFrm extends javax.swing.JFrame {
 
 	private void populateTable() {
 		Collection<BankAccount> accounts = this.bankService.getAccounts();
-
 		for (BankAccount account : accounts) {
 			rowdata[0] = account.getAccNumber();
 			rowdata[1] = account.getCustomer().getName();

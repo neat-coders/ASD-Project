@@ -1,8 +1,3 @@
-/**
- * Author: Bayarjargal Jargalsaikhan
- * Date:2024.05.22
- * Time:14:20
- */
 
 package app.framework.facade;
 

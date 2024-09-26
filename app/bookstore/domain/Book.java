@@ -1,8 +1,4 @@
-/**
- * Author: Bayarjargal Jargalsaikhan
- * Date:2024.05.22
- * Time:15:12
- */
+
 
 package app.bookstore.domain;
 

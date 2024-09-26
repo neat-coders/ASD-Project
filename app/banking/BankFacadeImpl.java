@@ -14,10 +14,14 @@ import java.util.Collection;
 
 public class BankFacadeImpl extends BankFacade {
 
-    private static BankFacadeImpl instance = new BankFacadeImpl();
+    private static BankFacadeImpl instance =null;
 
     public static BankFacadeImpl getInstance() {
-        return BankFacadeImpl.instance;
+        // Lazy initialization Singleton
+        if (instance == null) {
+            instance = new BankFacadeImpl();
+        }
+        return instance;
     }
 
     private BankFacadeImpl() {
