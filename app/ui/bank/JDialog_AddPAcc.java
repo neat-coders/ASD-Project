@@ -9,7 +9,7 @@ import app.banking.BankFacadeImpl;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
-import app.framework.domain.AccountType;
+import app.framework.entity.AccountType;
 import app.framework.exceptions.AccountCreationException;
 
 import javax.swing.*;

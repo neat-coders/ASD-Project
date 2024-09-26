@@ -1,4 +1,4 @@
-package app.framework.domain;
+package app.framework.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;

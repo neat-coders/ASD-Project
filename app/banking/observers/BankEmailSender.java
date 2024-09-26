@@ -1,9 +1,9 @@
 package app.banking.observers;
 
 import app.banking.domain.BankAccount;
-import app.framework.domain.Event;
-import app.framework.domain.Observable;
-import app.framework.domain.Observer;
+import app.framework.entity.Event;
+import app.framework.entity.Observable;
+import app.framework.entity.Observer;
 
 public class BankEmailSender implements Observer {
     private static BankEmailSender instance = new BankEmailSender();
@@ -16,12 +16,12 @@ public class BankEmailSender implements Observer {
 
     @Override
     public void subscribe(Observable subject) {
-        subject.register(this);
+        subject.registerObserver(this);
     }
 
     @Override
     public void unsubscribe(Observable subject) {
-        subject.unregister(this);
+        subject.unregisterObserver(this);
     }
 
     @Override

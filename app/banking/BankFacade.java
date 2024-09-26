@@ -4,11 +4,11 @@ import app.banking.customer.Personal;
 import app.banking.customer.Company;
 import app.banking.domain.BankAccount;
 import app.banking.domain.BankEntry;
-import app.framework.domain.*;
+import app.framework.entity.*;
 import app.framework.exceptions.AccountCreationException;
 import app.framework.exceptions.AccountNotFoundException;
 import app.framework.facade.CommonBankFacadeImpl;
-import app.framework.persistence.DAO;
+import app.framework.repository.DAO;
 import app.framework.rules.RuleEngine;
 
 import java.time.LocalDate;

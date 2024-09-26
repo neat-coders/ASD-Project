@@ -6,7 +6,7 @@
 package app.banking.rules;
 
 import app.banking.domain.BankAccount;
-import app.framework.domain.*;
+import app.framework.entity.*;
 import app.framework.rules.BankTransactionRule;
 
 import java.util.List;
@@ -27,11 +27,11 @@ public class CompanyBankAccountWithdrawNotifyRule extends Subject implements Ban
 
     @Override
     public void apply(BankAccount account, Double amount, String desc, Event event) {
-        this.alert(Event.WITHDRAW, account);
+        this.notifyObservers(Event.WITHDRAW, account);
     }
 
     @Override
-    public void alert(Event event, Object ob) {
+    public void notifyObservers(Event event, Object ob) {
         for(Observer obs: this.getObserverList()){
             obs.callback( event,  ob);
         }

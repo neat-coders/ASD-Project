@@ -6,8 +6,8 @@
 
 package app.framework.facade;
 
-import app.framework.domain.Account;
-import app.framework.domain.Entry;
+import app.framework.entity.Account;
+import app.framework.entity.Entry;
 
 public interface CommonBankFacade<R extends Account, T extends Entry, I> extends CommonFacade<R, I> {
 

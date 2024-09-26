@@ -4,7 +4,7 @@ import app.banking.domain.BankAccount;
 import app.banking.persistence.BankAccountDAO;
 import app.banking.strategies.CheckingPercentageStrategy;
 import app.banking.strategies.SavingPercentageStrategy;
-import app.framework.domain.*;
+import app.framework.entity.*;
 import app.framework.exceptions.AccountCreationException;
 import app.framework.exceptions.AccountNotFoundException;
 import app.framework.rules.BankRuleEngine;

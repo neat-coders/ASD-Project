@@ -6,8 +6,8 @@
 
 package app.framework.facade;
 
-import app.framework.domain.*;
-import app.framework.persistence.DAO;
+import app.framework.entity.*;
+import app.framework.repository.DAO;
 import app.framework.rules.RuleEngine;
 
 import java.util.ArrayList;
@@ -69,17 +69,17 @@ public abstract class CommonBankFacadeImpl<R extends Account, T extends Entry, I
     }
 
     @Override
-    public void register(Observer ob) {
+    public void registerObserver(Observer ob) {
         this.observers.add(ob);
     }
 
     @Override
-    public void unregister(Observer ob) {
+    public void removeObserver(Observer ob) {
         this.observers.remove(ob);
     }
 
     @Override
-    public void alert(Event event, Object ob) {
+    public void notifyObservers(Event event, Object ob) {
         this.observers.forEach(e -> e.callback(event, ob));
     }
 }

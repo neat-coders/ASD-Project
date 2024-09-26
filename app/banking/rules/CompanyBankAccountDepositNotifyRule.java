@@ -6,9 +6,9 @@
 package app.banking.rules;
 
 import app.banking.domain.BankAccount;
-import app.framework.domain.Event;
-import app.framework.domain.Observer;
-import app.framework.domain.Subject;
+import app.framework.entity.Event;
+import app.framework.entity.Observer;
+import app.framework.entity.Subject;
 import app.framework.rules.BankTransactionRule;
 
 import java.util.List;
@@ -29,11 +29,11 @@ public class CompanyBankAccountDepositNotifyRule extends Subject implements Bank
 
     @Override
     public void apply(BankAccount account, Double amount, String desc, Event event) {
-        this.alert(Event.DEPOSIT, account);
+        this.notifyObservers(Event.DEPOSIT, account);
     }
 
     @Override
-    public void alert(Event event, Object ob) {
+    public void notifyObservers(Event event, Object ob) {
         for(Observer obs: this.getObserverList()){
             obs.callback( event,  ob);
         }

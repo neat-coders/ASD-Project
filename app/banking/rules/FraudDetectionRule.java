@@ -8,7 +8,7 @@ package app.banking.rules;
 
 import app.banking.domain.BankAccount;
 import app.framework.exceptions.FraudTransactionException;
-import app.framework.domain.*;
+import app.framework.entity.*;
 import app.framework.rules.BankTransactionRule;
 
 import java.time.Duration;
@@ -38,12 +38,12 @@ public class FraudDetectionRule extends Subject implements BankTransactionRule {
 
     @Override
     public void apply(BankAccount acc, Double amount, String desc, Event event) {
-        this.alert(Event.FRAUD_TRANSACTION_ALERT, acc);
+        this.notifyObservers(Event.FRAUD_TRANSACTION_ALERT, acc);
         throw new FraudTransactionException("Possible fraud transaction");
     }
 
     @Override
-    public void alert(Event event, Object ob) {
+    public void notifyObservers(Event event, Object ob) {
         for(Observer obs: this.getObserverList()){
             obs.callback( event,  ob);
         }

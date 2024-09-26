@@ -1,8 +1,7 @@
 package app.ui.bank;
 
 import app.banking.BankFacadeImpl;
-import app.framework.domain.AccountType;
-import app.framework.exceptions.AccountCreationException;
+import app.framework.entity.AccountType;
 
 import javax.swing.*;
 

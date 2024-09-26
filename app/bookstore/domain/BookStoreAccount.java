@@ -6,10 +6,10 @@
 
 package app.bookstore.domain;
 
-import app.framework.domain.Account;
-import app.framework.domain.Customer;
-import app.framework.domain.Entry;
-import app.framework.domain.Event;
+import app.framework.entity.Account;
+import app.framework.entity.Customer;
+import app.framework.entity.Entry;
+import app.framework.entity.Event;
 
 public class BookStoreAccount extends Account {
     public BookStoreAccount(String accNumber, Customer customer) {

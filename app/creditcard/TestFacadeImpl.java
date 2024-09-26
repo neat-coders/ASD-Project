@@ -6,12 +6,10 @@
 
 package app.creditcard;
 
-import app.banking.domain.BankAccount;
 import app.banking.domain.BankEntry;
-import app.framework.domain.Observer;
+import app.framework.entity.Observer;
 import app.framework.facade.CommonBankFacadeImpl;
-import app.framework.persistence.DAO;
-import app.framework.persistence.Database;
+import app.framework.repository.DAO;
 import app.framework.rules.RuleEngine;
 import java.util.List;
 

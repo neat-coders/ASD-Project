@@ -7,12 +7,11 @@
 package app.creditcard;
 
 import app.banking.domain.BankAccount;
-import app.banking.persistence.BankAccountDAO;
 import app.banking.domain.BankEntry;
-import app.framework.domain.Address;
-import app.framework.domain.Customer;
-import app.framework.domain.Event;
-import app.framework.persistence.DAO;
+import app.framework.entity.Address;
+import app.framework.entity.Customer;
+import app.framework.entity.Event;
+import app.framework.repository.DAO;
 import app.framework.rules.RuleEngine;
 
 import java.time.LocalDateTime;

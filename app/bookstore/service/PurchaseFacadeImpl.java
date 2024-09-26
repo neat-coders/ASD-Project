@@ -8,9 +8,9 @@ package app.bookstore.service;
 
 import app.bookstore.domain.BookStoreAccount;
 import app.bookstore.domain.PurchaseEntry;
-import app.framework.domain.Observer;
+import app.framework.entity.Observer;
 import app.framework.facade.CommonBankFacadeImpl;
-import app.framework.persistence.DAO;
+import app.framework.repository.DAO;
 import app.framework.rules.RuleEngine;
 
 import java.util.List;

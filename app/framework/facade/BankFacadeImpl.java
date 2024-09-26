@@ -1,8 +1,6 @@
 package app.framework.facade;
-import app.framework.domain.Account;
-import app.framework.persistence.DAO;
-import app.framework.persistence.Database;
-import app.framework.rules.BankRuleEngine;
+import app.framework.entity.Account;
+import app.framework.repository.DAO;
 import app.framework.rules.RuleEngine;
 
 

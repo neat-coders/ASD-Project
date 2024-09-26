@@ -6,8 +6,8 @@
 
 package app.framework.facade;
 
-import app.framework.persistence.DAO;
-import app.framework.persistence.Database;
+import app.framework.repository.DAO;
+import app.framework.repository.Database;
 
 import java.util.Collection;
 

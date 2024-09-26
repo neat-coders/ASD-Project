@@ -1,4 +1,4 @@
-package app.framework.domain;
+package app.framework.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,12 +7,12 @@ public abstract class Subject implements Observable{
     protected List<Observer> observerList = new ArrayList<>();
 
     @Override
-    public void register(Observer ob) {
+    public void registerObserver(Observer ob) {
         this.observerList.add(ob);
     }
 
     @Override
-    public void unregister(Observer ob) {
+    public void removeObserver(Observer ob) {
         this.observerList.remove(ob);
     }
 

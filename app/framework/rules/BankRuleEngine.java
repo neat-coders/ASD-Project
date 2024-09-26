@@ -2,7 +2,7 @@ package app.framework.rules;
 
 import app.banking.domain.BankAccount;
 import app.banking.domain.BankEntry;
-import app.framework.domain.Event;
+import app.framework.entity.Event;
 
 public class BankRuleEngine extends RuleEngine<BankAccount, BankEntry> {
 

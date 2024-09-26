@@ -1,7 +1,7 @@
 package app.banking.customer;
 
-import app.framework.domain.Address;
-import app.framework.domain.Customer;
+import app.framework.entity.Address;
+import app.framework.entity.Customer;
 
 public class Company extends Customer {
     private final long numberOfEmployees;

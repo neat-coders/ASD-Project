@@ -8,9 +8,8 @@ package app.bookstore.rules;
 
 import app.bookstore.domain.BookStoreAccount;
 import app.bookstore.domain.PurchaseEntry;
-import app.framework.domain.Event;
-import app.framework.domain.Observable;
-import app.framework.domain.Observer;
+import app.framework.entity.Event;
+import app.framework.entity.Observer;
 
 import java.util.List;
 
@@ -32,17 +31,17 @@ public class EntryAmountNotificationRule extends NotificationRule {
     }
 
     @Override
-    public void register(Observer ob) {
+    public void registerObserver(Observer ob) {
         ob.subscribe(this);
     }
 
     @Override
-    public void unregister(Observer ob) {
+    public void removeObserver(Observer ob) {
         ob.unsubscribe(this);
     }
 
     @Override
-    public void alert(Event event, Object ob) {
+    public void notifyObservers(Event event, Object ob) {
         observers.forEach(e -> e.callback(event, ob));
     }
 }

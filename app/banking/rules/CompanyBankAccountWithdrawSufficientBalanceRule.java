@@ -7,9 +7,9 @@
 package app.banking.rules;
 
 import app.banking.domain.BankAccount;
-import app.framework.domain.Event;
-import app.framework.domain.Observer;
-import app.framework.domain.Subject;
+import app.framework.entity.Event;
+import app.framework.entity.Observer;
+import app.framework.entity.Subject;
 import app.framework.exceptions.InsufficientBalanceException;
 import app.framework.rules.BankTransactionRule;
 
@@ -37,12 +37,12 @@ public class CompanyBankAccountWithdrawSufficientBalanceRule extends Subject imp
 
     @Override
     public void apply(BankAccount account, Double amount, String desc, Event event) {
-        this.alert(Event.WITHDRAW, account);
+        this.notifyObservers(Event.WITHDRAW, account);
         throw new InsufficientBalanceException("Not Sufficient Funds");
     }
 
     @Override
-    public void alert(Event event, Object ob) {
+    public void notifyObservers(Event event, Object ob) {
         for(Observer obs: this.getObserverList()){
             obs.callback( event,  ob);
         }

@@ -1,6 +1,6 @@
 package app.creditcard;
 
-import app.framework.domain.*;
+import app.framework.entity.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

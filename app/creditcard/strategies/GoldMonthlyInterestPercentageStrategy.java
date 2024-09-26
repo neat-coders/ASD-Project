@@ -1,6 +1,6 @@
 package app.creditcard.strategies;
 
-import app.framework.domain.PercentageStrategy;
+import app.framework.entity.PercentageStrategy;
 
 public class GoldMonthlyInterestPercentageStrategy implements PercentageStrategy {
 

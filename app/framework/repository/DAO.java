@@ -1,4 +1,4 @@
-package app.framework.persistence;
+package app.framework.repository;
 
 import java.io.File;
 import java.nio.file.FileSystems;

@@ -4,7 +4,7 @@ import app.banking.domain.BankAccount;
 import app.banking.domain.BankEntry;
 import app.banking.observers.BankEmailSender;
 import app.banking.rules.*;
-import app.framework.domain.Observer;
+import app.framework.entity.Observer;
 import app.framework.rules.BankRuleEngine;
 import app.framework.rules.Rule;
 

@@ -1,4 +1,4 @@
-package app.framework.domain;
+package app.framework.entity;
 
 public enum Event {
     WITHDRAW, TRANSFER, DEPOSIT, INSUFFICIENT_FUND, TRANSACTION_ALERT, FRAUD_TRANSACTION_ALERT, CHARGE, PURCHASE

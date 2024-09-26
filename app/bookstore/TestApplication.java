@@ -8,21 +8,19 @@ package app.bookstore;
 
 import app.bookstore.domain.Book;
 import app.bookstore.domain.BookStoreAccount;
-import app.bookstore.domain.PurchaseEntry;
 import app.bookstore.rules.ChristmasDiscountRule;
 import app.bookstore.rules.LoyalCustomerDiscountRule;
 import app.bookstore.service.AccountFacade;
 import app.bookstore.service.AccountFacadeImpl;
 import app.bookstore.service.BookFacade;
 import app.bookstore.service.BookFacadeImpl;
-import app.framework.domain.Address;
-import app.framework.domain.Customer;
-import app.framework.domain.Observer;
-import app.framework.persistence.DAO;
+import app.framework.entity.Address;
+import app.framework.entity.Customer;
+import app.framework.entity.Observer;
+import app.framework.repository.DAO;
 import app.framework.rules.RuleEngine;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 

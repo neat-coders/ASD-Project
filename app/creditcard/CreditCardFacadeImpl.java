@@ -2,7 +2,7 @@ package app.creditcard;
 
 import app.creditcard.observers.CreditCardEmailSender;
 import app.creditcard.strategies.*;
-import app.framework.domain.*;
+import app.framework.entity.*;
 import app.framework.exceptions.AccountCreationException;
 import app.creditcard.strategies.BronzeMonthlyInterestPercentageStrategy;
 import app.creditcard.strategies.GoldMonthlyInterestPercentageStrategy;
@@ -93,7 +93,7 @@ public class CreditCardFacadeImpl extends CommonBankFacadeImpl<CreditAccount, Cr
     public void chargeAmount(String ccNumber, double amount) {
         CreditAccount account = this.getDatabase().get(ccNumber);
         if(amount > 400){
-            this.alert(Event.CHARGE, account);
+            this.notifyObservers(Event.CHARGE, account);
         }
         account.withdraw(amount, "charge");
         this.getDatabase().save(ccNumber, account);

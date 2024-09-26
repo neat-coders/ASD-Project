@@ -1,9 +1,9 @@
 package app.creditcard.observers;
 
 import app.creditcard.CreditAccount;
-import app.framework.domain.Event;
-import app.framework.domain.Observable;
-import app.framework.domain.Observer;
+import app.framework.entity.Event;
+import app.framework.entity.Observable;
+import app.framework.entity.Observer;
 
 public class CreditCardEmailSender implements Observer {
     private static CreditCardEmailSender instance = new CreditCardEmailSender();
@@ -16,12 +16,12 @@ public class CreditCardEmailSender implements Observer {
 
     @Override
     public void subscribe(Observable subject) {
-        subject.register(this);
+        subject.registerObserver(this);
     }
 
     @Override
     public void unsubscribe(Observable subject) {
-        subject.unregister(this);
+        subject.removeObserver(this);
     }
 
     public void callback(Event event, Object ob){

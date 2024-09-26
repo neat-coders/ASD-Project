@@ -6,9 +6,9 @@
 
 package app.bookstore.integration;
 
-import app.framework.domain.Event;
-import app.framework.domain.Observable;
-import app.framework.domain.Observer;
+import app.framework.entity.Event;
+import app.framework.entity.Observable;
+import app.framework.entity.Observer;
 
 public class BookStoreEmailSender implements Observer {
     @Override
