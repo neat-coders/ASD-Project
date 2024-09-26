@@ -21,7 +21,7 @@ public class BankEmailSender implements Observer {
 
     @Override
     public void unsubscribe(Observable subject) {
-        subject.unregisterObserver(this);
+        subject.removeObserver(this);
     }
 
     @Override
