@@ -101,10 +101,24 @@ public class CreditCardFacadeImpl extends CommonBankFacadeImpl<CreditAccount, Cr
 
     @Override
     public void deposit(String ccNumber, double amount) throws CreditInvalidDepositException {
+        System.out.println("Inside deposit method");
+
         CreditAccount account = this.getDatabase().get(ccNumber);
+        minimumPaymentStrategy= account.getMinimumPaymentStrategy();
+
+
+        double minPayment=minimumPaymentStrategy.getPercentAmount(account.getBalance());
+
+
+if(amount < Math.abs(minPayment)){
+    throw new CreditInvalidDepositException("Can not deposit less than " + Math.abs(minPayment));
+}
         if (account.getBalance() >= 0 || account.getBalance() + amount > 0) {
             throw new CreditInvalidDepositException("Cannot deposit more than you owe");
         }
+
+        // add interest to the remaining amount.
+        account.addInterest();
         account.deposit(amount, "deposit");
         this.getDatabase().save(ccNumber, account);
     }
