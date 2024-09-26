@@ -1,8 +1,4 @@
-/**
- * Author: Bayarjargal Jargalsaikhan
- * Date:2024.05.21
- * Time:14:42
- */
+
 package app.banking.rules;
 
 import app.banking.domain.BankAccount;
